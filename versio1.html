@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title>Repte Comarques Catalunya 2026</title>
+<style>
+:root{--bg:#070914;--panel:#111629;--panel2:#171d34;--text:#f4f7ff;--muted:#aeb8d4;--cyan:#00ffd5;--pink:#ff4fd8;--gold:#ffd166;--green:#48ff91;--red:#ff5f6d;--blue:#5dd6ff;--stroke:#303955}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 12% 8%,rgba(0,255,213,.22),transparent 28%),radial-gradient(circle at 90% 12%,rgba(255,79,216,.18),transparent 28%),linear-gradient(145deg,#060711,#0d1020 55%,#090b18);color:var(--text);overflow-x:hidden}.wrap{width:min(1180px,100%);margin:auto;padding:16px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:stretch}.card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.13);border-radius:28px;box-shadow:0 18px 70px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.12);backdrop-filter:blur(14px)}.top{padding:22px}.kicker{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(0,255,213,.1);border:1px solid rgba(0,255,213,.25);color:var(--cyan);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.title{font-size:clamp(31px,5.2vw,64px);line-height:.95;margin:14px 0 8px;font-weight:950;letter-spacing:-.05em}.title span{background:linear-gradient(90deg,var(--cyan),var(--pink),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}.sub{color:var(--muted);font-weight:650;line-height:1.45;margin:0 0 18px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{padding:12px;border-radius:20px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.08);text-align:center}.stat b{display:block;font-size:22px}.stat small{color:var(--muted);font-weight:800;font-size:11px;text-transform:uppercase}.controls{padding:16px;display:grid;gap:12px}.btn{border:0;border-radius:20px;padding:15px 18px;color:#071018;font-weight:950;font-size:16px;cursor:pointer;background:linear-gradient(135deg,var(--cyan),var(--green));box-shadow:0 12px 34px rgba(0,255,213,.18);transition:.18s transform,.18s filter}.btn:active{transform:scale(.98)}.btn.secondary{background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.12);box-shadow:none}.game{margin-top:14px;display:grid;grid-template-columns:1.3fr .7fr;gap:14px}.mapCard{position:relative;min-height:540px;padding:14px;overflow:hidden}.mapHead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:2px 2px 12px}.pill{border-radius:999px;padding:8px 12px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.12);color:var(--muted);font-weight:900;font-size:12px}.progress{height:10px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--pink));border-radius:999px;transition:.4s}.svgbox{width:100%;height:480px;display:flex;align-items:center;justify-content:center;border-radius:24px;background:radial-gradient(circle at center,rgba(93,214,255,.08),rgba(0,0,0,.08));border:1px solid rgba(255,255,255,.06);overflow:hidden}svg{width:100%;height:100%;touch-action:manipulation}.comarca{fill:#05070d;stroke:#4c587a;stroke-width:.8;vector-effect:non-scaling-stroke;transition:.22s}.comarca.done{fill:#151c2f;stroke:#7280a5}.comarca.target{fill:url(#targetGradient);stroke:#fff;stroke-width:2.1;filter:drop-shadow(0 0 14px rgba(0,255,213,.85));animation:pulse 1.2s infinite alternate}.comarca.wrong{fill:#ff5f6d!important}.comarca.ok{fill:#48ff91!important}@keyframes pulse{from{opacity:.85}to{opacity:1}}.side{padding:16px;display:grid;gap:14px;align-content:start}.question{font-size:25px;font-weight:950;line-height:1.05;letter-spacing:-.02em}.question span{color:var(--cyan)}.options{display:grid;gap:10px}.opt{width:100%;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));color:var(--text);border-radius:18px;padding:16px;text-align:left;font-size:16px;font-weight:900;cursor:pointer;transition:.16s}.opt:hover{border-color:rgba(0,255,213,.6);transform:translateY(-1px)}.opt.correct{background:linear-gradient(135deg,rgba(72,255,145,.95),rgba(0,255,213,.85));color:#06130e}.opt.bad{background:linear-gradient(135deg,rgba(255,95,109,.95),rgba(255,79,216,.7));color:#210408}.message{min-height:58px;border-radius:20px;padding:14px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-weight:850;line-height:1.25}.loading{position:absolute;inset:14px;display:grid;place-items:center;text-align:center;background:rgba(7,9,20,.86);border-radius:24px;z-index:5}.spinner{width:54px;height:54px;border-radius:50%;border:4px solid rgba(255,255,255,.12);border-top-color:var(--cyan);animation:spin .8s linear infinite;margin:auto auto 18px}@keyframes spin{to{transform:rotate(360deg)}}.final{display:none;position:fixed;inset:0;z-index:20;background:rgba(3,5,12,.86);backdrop-filter:blur(14px);padding:18px;place-items:center}.final.show{display:grid}.finalBox{width:min(620px,100%);padding:28px;text-align:center}.finalBox h2{font-size:clamp(32px,6vw,58px);margin:0 0 10px}.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:25}.bit{position:absolute;width:10px;height:18px;background:var(--cyan);opacity:.9;animation:fall 1.7s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(580deg);opacity:0}}@media(max-width:860px){.wrap{padding:10px}.hero,.game{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.mapCard{min-height:auto;padding:10px;border-radius:22px}.svgbox{height:min(68vh,520px)}.side{padding:12px}.question{font-size:22px}.top{padding:18px}.controls{grid-template-columns:1fr 1fr}.btn{padding:14px 10px}}@media(max-width:430px){.svgbox{height:56vh}.stats{gap:8px}.stat{padding:10px 6px}.opt{padding:14px}.controls{grid-template-columns:1fr}}
+.compactHud{display:none;position:sticky;top:0;z-index:10;margin-bottom:10px;grid-template-columns:repeat(4,1fr);gap:8px;padding:8px;border-radius:20px;background:rgba(3,5,12,.86);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(16px);box-shadow:0 12px 34px rgba(0,0,0,.28)}.compactHud.show{display:grid}.compactHud span,.compactHud a{display:flex;align-items:center;justify-content:center;min-height:38px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--text);text-decoration:none;font-weight:950;font-size:13px}.compactHud a{color:var(--cyan)}body.playing .wrap{padding-top:8px}body.playing .game{margin-top:0}body.playing .svgbox{height:min(67vh,620px)}body.playing .side{padding:12px}@media(max-width:860px){.compactHud{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:8px}.compactHud span,.compactHud a{font-size:12px;min-height:34px}.game{gap:10px}body.playing .svgbox{height:52vh}.mapHead{margin-bottom:8px}.progress{height:8px}.message{min-height:auto}.side{gap:10px}.question{font-size:20px}}@media(max-width:430px){body.playing .svgbox{height:50vh}.mapCard{padding:8px}.opt{padding:13px}.answerInput{padding:14px;font-size:17px}.miniBtn{min-height:52px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero" id="hero">
+    <div class="card top">
+      <div class="kicker">🗺️ Joc geogràfic 2026</div>
+      <h1 class="title">Repte <span>Comarques</span> de Catalunya</h1>
+      <p class="sub">Endevina la comarca destacada al mapa real. Cada encert suma 1 punt. Si n'encertes 3 seguides, actives ratxa i la tercera resposta dona 5 punts. La partida acaba quan han sortit totes les comarques, sense repetir-ne cap.</p>
+      <div class="stats">
+        <div class="stat"><b id="score">0</b><small>Punts</small></div>
+        <div class="stat"><b id="streak">0</b><small>Ratxa</small></div>
+        <div class="stat"><b id="round">0/43</b><small>Comarques</small></div>
+        <div class="stat"><b id="best">0</b><small>Rècord</small></div>
+      </div>
+    </div>
+    <div class="card controls">
+      <button class="btn" id="startBtn">Començar partida</button>
+      <button class="btn secondary" id="restartBtn">Reiniciar</button>
+      <div class="message" id="introMsg">Carrega el mapa real oficial i prepara't. Ideal per jugar al mòbil des de GitHub Pages.</div>
+    </div>
+  </section>
+  <section class="compactHud" id="compactHud" aria-label="Marcador compacte">
+    <span>⭐ <b id="miniScore">0</b> punts</span>
+    <span>🔥 Ratxa <b id="miniStreak">0</b></span>
+    <span>🗺️ <b id="miniRound">0/43</b></span>
+    <a href="index.html">Inici</a>
+  </section>
+  <section class="game" id="game">
+    <div class="card mapCard">
+      <div class="mapHead"><div class="pill" id="status">Preparant el mapa…</div><div class="pill" id="countPill">0/43</div></div>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <div class="svgbox"><svg id="map" viewBox="0 0 1000 950" role="img" aria-label="Mapa de comarques de Catalunya"><defs><linearGradient id="targetGradient" x1="0" x2="1"><stop offset="0" stop-color="#00ffd5"/><stop offset=".55" stop-color="#5dd6ff"/><stop offset="1" stop-color="#ff4fd8"/></linearGradient></defs><g id="mapG"></g></svg></div>
+      <div class="loading" id="loading"><div><div class="spinner"></div><h2>Carregant el mapa real oficial</h2><p>Es carreguen les geometries reals de les comarques des del servei ArcGIS/ICGC.</p></div></div>
+    </div>
+    <aside class="card side">
+      <div class="question">Quina comarca està <span>il·luminada</span>?</div>
+      <div class="options" id="options"></div>
+      <div class="message" id="msg">Prem “Començar partida”.</div>
+    </aside>
+  </section>
+</div>
+<div class="final" id="final"><div class="card finalBox"><h2>🎉 Partida completada!</h2><p id="finalText"></p><button class="btn" onclick="restartGame()">Tornar a jugar</button></div></div><div class="confetti" id="confetti"></div>
+<script>
+const DATA_URLS=[
+ 'https://maps.icgc.cat/vector01/rest/services/divisions_administratives_wfs/MapServer/13/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326',
+ 'https://maps.icgc.cat/vector01/rest/services/divisions_administratives_wfs/MapServer/12/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326',
+ 'https://maps.icgc.cat/vector01/rest/services/divisions_administratives_wfs/MapServer/11/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson&outSR=4326'
+];
+const els={score:by('score'),streak:by('streak'),round:by('round'),best:by('best'),status:by('status'),countPill:by('countPill'),bar:by('bar'),mapG:by('mapG'),loading:by('loading'),options:by('options'),msg:by('msg'),introMsg:by('introMsg'),final:by('final'),finalText:by('finalText'),hero:by('hero'),compactHud:by('compactHud'),miniScore:by('miniScore'),miniStreak:by('miniStreak'),miniRound:by('miniRound')};
+let features=[], order=[], index=0, score=0, streak=0, current=null, answered=false, started=false;
+function by(id){return document.getElementById(id)}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function normalize(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
+function getName(props){
+ const preferred=['NOMCOMAR','NOM_COMAR','NOMCOM','NOM_COM','NOM','nom_comarca','nomcomar','comarca','COMARCA','name'];
+ for(const k of preferred){if(props&&props[k]&&String(props[k]).trim())return String(props[k]).trim()}
+ const entries=Object.entries(props||{}).filter(([k,v])=>typeof v==='string'&&v.trim().length>2&&!/^[0-9. -]+$/.test(v));
+ const withNom=entries.find(([k])=>/nom|name|comar/i.test(k));
+ return (withNom?withNom[1]:(entries[0]?entries[0][1]:'Comarca')).trim();
+}
+async function loadData(){
+ let last='';
+ for(const url of DATA_URLS){
+  try{
+   const r=await fetch(url,{cache:'force-cache'});
+   const txt=await r.text();
+   if(!txt.trim().startsWith('{')){ last='El servidor no ha retornat GeoJSON.'; continue; }
+   const gj=JSON.parse(txt);
+   if(gj.features&&gj.features.length>=40){ features=prepare(gj.features); return; }
+   last='GeoJSON sense prou comarques.';
+  }catch(e){ last=e.message; }
+ }
+ throw new Error(last||'No s’ha pogut carregar el mapa.');
+}
+function prepare(fs){
+ const seen=new Set();
+ return fs.map((f,i)=>({id:i,name:getName(f.properties),geometry:f.geometry,properties:f.properties||{}}))
+  .filter(f=>f.geometry&&f.name&&!seen.has(normalize(f.name))&&seen.add(normalize(f.name)))
+  .sort((a,b)=>a.name.localeCompare(b.name,'ca'));
+}
+function coordsOf(geom){let out=[];function walk(c){if(typeof c[0]==='number')out.push(c);else c.forEach(walk)} walk(geom.coordinates); return out;}
+function polygonPath(ring,tx){return ring.map((p,i)=>{const [x,y]=tx(p);return (i?'L':'M')+x.toFixed(1)+','+y.toFixed(1)}).join('')+'Z'}
+function featurePath(geom,tx){
+ if(geom.type==='Polygon') return geom.coordinates.map(r=>polygonPath(r,tx)).join('');
+ if(geom.type==='MultiPolygon') return geom.coordinates.flatMap(poly=>poly.map(r=>polygonPath(r,tx))).join('');
+ return '';
+}
+function drawMap(){
+ const all=features.flatMap(f=>coordsOf(f.geometry));
+ const xs=all.map(p=>p[0]), ys=all.map(p=>p[1]);
+ const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
+ const W=1000,H=950,pad=30, scale=Math.min((W-pad*2)/(maxX-minX),(H-pad*2)/(maxY-minY));
+ const ox=(W-(maxX-minX)*scale)/2, oy=(H-(maxY-minY)*scale)/2;
+ const tx=p=>[ox+(p[0]-minX)*scale, H-(oy+(p[1]-minY)*scale)];
+ els.mapG.innerHTML='';
+ for(const f of features){
+  const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+  path.setAttribute('d',featurePath(f.geometry,tx)); path.setAttribute('class','comarca'); path.dataset.name=f.name; path.id='c_'+normalize(f.name).replace(/[^a-z0-9]+/g,'_');
+  path.addEventListener('click',()=>{ if(current&&f.name===current.name) selectAnswer(f.name); });
+  els.mapG.appendChild(path);
+ }
+}
+function updateHud(){els.score.textContent=score;els.streak.textContent=streak;els.round.textContent=index+'/'+features.length;els.countPill.textContent=index+'/'+features.length;els.bar.style.width=(features.length?index/features.length*100:0)+'%';els.best.textContent=localStorage.getItem('comarquesBest')||0;if(els.miniScore)els.miniScore.textContent=score;if(els.miniStreak)els.miniStreak.textContent=streak;if(els.miniRound)els.miniRound.textContent=index+'/'+features.length}
+function clearClasses(){document.querySelectorAll('.comarca').forEach(p=>p.classList.remove('target','wrong','ok'))}
+function markDone(){order.slice(0,index).forEach(f=>{const p=findPath(f.name); if(p)p.classList.add('done')})}
+function findPath(name){return [...document.querySelectorAll('.comarca')].find(p=>p.dataset.name===name)}
+function nextQuestion(){
+ if(index>=order.length){finish();return}
+ answered=false; current=order[index]; clearClasses(); markDone(); const p=findPath(current.name); if(p)p.classList.add('target');
+ const wrong=shuffle(features.filter(f=>f.name!==current.name).map(f=>f.name)).slice(0,3); const opts=shuffle([current.name,...wrong]);
+ els.options.innerHTML=opts.map(o=>`<button class="opt" data-v="${o.replace(/"/g,'&quot;')}">${o}</button>`).join('');
+ document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>selectAnswer(b.dataset.v));
+ els.status.textContent='Comarca '+(index+1)+' de '+features.length; els.msg.textContent='Tria una de les 4 opcions.'; updateHud();
+}
+function selectAnswer(val){ if(answered||!started)return; answered=true; const ok=val===current.name; const target=findPath(current.name); document.querySelectorAll('.opt').forEach(b=>{if(b.dataset.v===current.name)b.classList.add('correct'); if(b.dataset.v===val&&!ok)b.classList.add('bad')});
+ if(ok){ streak++; let pts=(streak%3===0)?5:1; score+=pts; if(target)target.classList.add('ok'); els.msg.innerHTML=pts===5?'🔥 Ratxa de 3! Has guanyat <b>5 punts</b>.':'✅ Correcte! +1 punt.'; popConfetti(14); }
+ else { streak=0; if(target)target.classList.add('wrong'); els.msg.innerHTML='❌ No era correcte. Era <b>'+current.name+'</b>.'; }
+ index++; updateHud(); setTimeout(nextQuestion, ok?850:1500); }
+function startGame(){ if(!features.length)return; if(els.hero)els.hero.style.display='none'; if(els.compactHud)els.compactHud.classList.add('show'); document.body.classList.add('playing'); setTimeout(()=>window.scrollTo({top:0,behavior:'smooth'}),30); score=0;streak=0;index=0;started=true;order=shuffle([...features]); clearClasses(); document.querySelectorAll('.comarca').forEach(p=>p.classList.remove('done')); els.final.classList.remove('show'); nextQuestion(); }
+function restartGame(){startGame()} window.restartGame=restartGame;
+function finish(){started=false; clearClasses(); document.querySelectorAll('.comarca').forEach(p=>p.classList.add('done')); els.bar.style.width='100%'; const best=+(localStorage.getItem('comarquesBest')||0); if(score>best)localStorage.setItem('comarquesBest',score); updateHud(); els.finalText.textContent='Has completat les '+features.length+' comarques amb '+score+' punts.'; els.final.classList.add('show'); popConfetti(80); }
+function popConfetti(n){const c=by('confetti');for(let i=0;i<n;i++){const b=document.createElement('i');b.className='bit';b.style.left=Math.random()*100+'vw';b.style.top='-30px';b.style.background=['#00ffd5','#ff4fd8','#ffd166','#48ff91','#5dd6ff'][Math.floor(Math.random()*5)];b.style.animationDelay=Math.random()*.35+'s';c.appendChild(b);setTimeout(()=>b.remove(),2100)}}
+by('startBtn').onclick=startGame; by('restartBtn').onclick=restartGame;
+(async()=>{try{await loadData(); drawMap(); els.loading.style.display='none'; els.status.textContent='Mapa carregat'; els.introMsg.textContent='Mapa real carregat correctament. Ja pots començar la partida.'; updateHud(); els.round.textContent='0/'+features.length; els.countPill.textContent='0/'+features.length;}catch(e){els.loading.innerHTML='<div><h2>No s’ha pogut carregar el mapa real</h2><p>'+e.message+'</p><p>Obre la pàgina publicada a GitHub Pages i no des de la previsualització de GitHub.</p></div>'; els.msg.textContent='Error carregant el mapa.';}})();
+</script>
+</body>
+</html>
